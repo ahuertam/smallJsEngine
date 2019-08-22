@@ -59,7 +59,11 @@ class sceneObject {
 }
 
 const player1 = new sceneObject(10,100,'player');  
-const obstacle = new sceneObject(40,90,'obstacle'); 
+const obstacle1 = new sceneObject(80,90,'obstacle');
+const obstacle2 = new sceneObject(30,90,'obstacle'); 
+const obstacle3 = new sceneObject(100,90,'obstacle'); 
+const obstacle4 = new sceneObject(180,90,'obstacle'); 
+
 
 document.addEventListener('keydown', function(pressedKey){
 if(pressedKey.keyCode === keyBinds.up){
@@ -92,6 +96,12 @@ const cleanCanvas=()=>{
 const main = ()=>{
   cleanCanvas();
   player1.draw("#FF0000");
-  obstacle.draw("black");
-  obstacle.moveToCoordinate('y',2,false, true);
+  obstacle1.draw("black");
+  obstacle2.draw("black");
+  obstacle3.draw("black");
+  obstacle4.draw("black");
+  obstacle1.moveToCoordinate('x',2,true, true);
+  obstacle2.moveToCoordinate('x',3,false, true);
+  obstacle3.moveToCoordinate('y',4,true, false);
+  obstacle4.moveToCoordinate('y',5,false, false);
 };
